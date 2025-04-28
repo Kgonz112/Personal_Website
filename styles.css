@@ -1,0 +1,291 @@
+/* styles.css */
+
+/* ----------------------------- */
+/* Reset some basic styles       */
+/* ----------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ----------------------------- */
+/* Body and general text styles  */
+/* ----------------------------- */
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===========================
+   Header and Navigation
+   =========================== */
+   header {
+    position: fixed; /* Fixes the header at the top of the page */
+    top: 0; /* Aligns the header to the top of the page */
+    width: 100%; /* Ensures the header spans the full width of the page */
+    background-color: #333; /* Sets the background color of the header */
+    color: white; /* Sets the text color */
+    padding: 10px 0; /* Adds padding inside the header */
+    z-index: 1000; /* Keeps the header above other content */
+  }
+  
+  header h1 {
+    text-align: center; /* Centers the header text */
+    font-size: 1.8rem; /* Sets the font size of the header title */
+  }
+  
+  nav {
+    display: flex; /* Uses Flexbox for the navigation */
+    justify-content: center; /* Centers the navigation links horizontally */
+    align-items: center; /* Vertically aligns the items in the center */
+    margin-top: 10px; /* Adds space between the header title and navigation */
+  }
+  
+  nav ul {
+    display: flex; /* Aligns the list items horizontally */
+    list-style: none; /* Removes default bullet points from the list */
+  }
+  
+  nav ul li {
+    margin: 0 20px; /* Adds space between the navigation items */
+  }
+  
+  nav ul li a {
+    color: white; /* Sets the link color */
+    text-decoration: none; /* Removes the underline from links */
+    font-size: 1.1rem; /* Sets the font size for the navigation links */
+    padding: 5px 10px; /* Adds padding around the links */
+    transition: background-color 0.3s ease; /* Adds a smooth transition effect when hovering */
+  }
+  
+  nav ul li a:hover {
+    background-color: #007bff; /* Changes background color when hovering over a link */
+    border-radius: 5px; /* Rounds the corners of the link on hover */
+  }
+  
+  /* Highlight active navigation link */
+  .nav-link.active {
+    background-color: #007bff; /* Sets the background color for the active link */
+    color: white; /* Sets the text color for the active link */
+    border-radius: 5px; /* Rounds the corners of the active link */
+  }
+  
+
+/* ----------------------------- */
+/* Main Content Box              */
+/* ----------------------------- */
+.content-box {
+  flex: 1;
+  padding: 20px;
+  min-width: 1400px;
+  max-width: 1400px;
+  min-height: 600px;
+  margin: 120px auto 20px auto; /* Top margin increased to push it down below the fixed header */
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Section hidden/shown classes */
+.hidden {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+/* About Section Layout */
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start; /* Image top left */
+  gap: 20px;
+}
+
+/* Profile Image */
+.profile-img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 0; /* Square corners */
+  border: 3px solid #1abc9c;
+  margin-top: 5px;
+}
+
+/* Bio Section */
+.bio {
+  flex: 1;
+}
+
+/* Bio Headings */
+.bio h3 {
+  font-size: 1.4rem;
+  margin-top: 30px; /* More padding at the top */
+}
+
+
+/* Bio Lists */
+.bio ul {
+  list-style: disc inside;
+  margin-top: 10px;
+}
+
+/* ----------------------------- */
+/* Projects Section              */
+/* ----------------------------- */
+.project {
+  display: flex; /* Enables flexbox layout */
+  align-items: flex-start; /* Aligns items to the top */
+  gap: 20px; /* Adds space between the image and text */
+  margin-bottom: 30px; /* Adds space below each project */
+}
+
+.project-img {
+  width: 160px; /* Sets the width of the project image */
+  height: auto; /* Maintains aspect ratio */
+  border-radius: 8px; /* Rounds the corners of the image */
+  object-fit: cover; /* Ensures the image covers the entire area */
+  border: 2px solid #ccc; /* Adds a border around the image */
+}
+
+.project-details {
+  flex: 1; /* Allows the text to take up remaining space */
+}
+
+.project-details h3 {
+  margin-bottom: 10px; /* Adds space below the project title */
+  color: #1abc9c; /* Sets the color of the project title */
+}
+
+.project-details p {
+  margin-bottom: 5px; /* Adds space below the project description */
+}
+
+.project-details a {
+  color: #3498db; /* Sets the color of the link */
+  text-decoration: none; /* Removes underline from the link */
+  transition: color 0.3s ease; /* Adds a smooth transition effect */
+}
+
+.project-details a:hover {
+  color: #2980b9; /* Changes color on hover */
+}
+
+/* ----------------------------- */
+/* Skills Section                */
+/* ----------------------------- */
+#skills ul {
+  list-style: square inside;
+  margin-top: 10px;
+}
+/* Skills Section */
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.skills-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.skill-icon {
+  width: px;
+  height: 100px;
+  margin-right: 10px;
+  border-radius: 10px;
+  border: 2px solid #333; /* <-- this adds the full border */
+}
+
+
+/* ----------------------------- */
+/* Footer                        */
+/* ----------------------------- */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Email Contact Form */
+footer form {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer input[type="email"] {
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  width: 250px;
+}
+
+footer button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #1abc9c;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+footer button:hover {
+  background-color: #16a085;
+}
+
+footer p {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+/* ----------------------------- */
+/* Responsive Design             */
+/* ----------------------------- */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-img {
+    width: 150px;
+    height: 150px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .content-box {
+    margin: 10px;
+    padding: 15px;
+  }
+  .project {
+    flex-direction: column; /* Stacks image and text vertically */
+    align-items: center; /* Centers items horizontally */
+    text-align: center; /* Centers text */
+  }
+
+  .project-img {
+    width: 100%; /* Sets image to full width */
+    max-width: 300px; /* Limits the maximum width of the image */
+  }
+  
+}
