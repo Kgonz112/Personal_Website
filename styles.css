@@ -201,6 +201,7 @@ body {
 }
 
 .skill-icon {
+  max-width: 140px;
   width: 140px;
   height: 100px;
   margin-right: 10px;
